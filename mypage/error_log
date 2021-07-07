@@ -1,0 +1,21 @@
+[28-Jun-2021 17:11:23 UTC] PHP Notice:  Undefined variable: _SESSION in /home/z07l1ujngjb5/public_html/mypage/index.php on line 116
+[28-Jun-2021 17:11:23 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/z07l1ujngjb5/public_html/mypage/index.php on line 116
+[28-Jun-2021 17:12:20 UTC] PHP Notice:  Undefined variable: _SESSION in /home/z07l1ujngjb5/public_html/mypage/index.php on line 116
+[28-Jun-2021 17:12:20 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/z07l1ujngjb5/public_html/mypage/index.php on line 116
+[28-Jun-2021 17:20:03 UTC] PHP Notice:  Undefined variable: _SESSION in /home/z07l1ujngjb5/public_html/mypage/index.php on line 116
+[28-Jun-2021 17:20:03 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/z07l1ujngjb5/public_html/mypage/index.php on line 116
+[28-Jun-2021 17:20:57 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 127
+[28-Jun-2021 17:22:58 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 127
+[28-Jun-2021 17:27:45 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /home/z07l1ujngjb5/public_html/mypage/index.php on line 270
+[28-Jun-2021 17:29:04 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 128
+[28-Jun-2021 17:32:48 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 128
+[01-Jul-2021 12:37:26 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[01-Jul-2021 14:15:55 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[01-Jul-2021 14:16:03 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[01-Jul-2021 14:16:40 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[01-Jul-2021 14:19:09 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[01-Jul-2021 14:46:34 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[01-Jul-2021 18:07:07 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[05-Jul-2021 20:07:12 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[05-Jul-2021 20:30:30 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
+[05-Jul-2021 20:36:35 UTC] PHP Notice:  Undefined index: full_name in /home/z07l1ujngjb5/public_html/mypage/index.php on line 131
