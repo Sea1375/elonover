@@ -1,18 +1,14 @@
 <?php
 session_start();
 
+/// initalizing database
+include('connection.php');
+
+
 // initializing variables
 $email_address    = "";
 $user_id = "";
 $errors = array(); 
-
-
-$dbservername = "localhost";
-$dbusername = "root";
-$dbpass = "";
-$dbname = "elonover";
-
-$db = mysqli_connect($dbservername,$dbusername,$dbpass,$dbname);
 
 
 // REGISTER USER
@@ -58,6 +54,7 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$full_name', '$user_id', '$email_address', '$password1')";
   	mysqli_query($db, $query);
   	$_SESSION['email_address'] = $email_address;
+    $_SESSION['full_name'] = $full_name;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: ../index.php');
   }
@@ -83,11 +80,39 @@ if (isset($_POST['login_user'])) {
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['email_address'] = $email_address;
+      $_SESSION['full_name'] = $full_name;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: ../index.php');
   	}else {
   		array_push($errors, "Wrong email/password combination");
   	}
+  }
+}
+
+if (isset($_POST['google_signin'])) {
+  $full_name = mysqli_real_escape_string($db, $_POST['full_name']);
+  $google_id = mysqli_real_escape_string($db, $_POST['google_id']);
+  $email_address = mysqli_real_escape_string($db, $_POST['email_address']);
+
+  // first check the database to make sure 
+  // a user does not already exist with the same username and/or email
+  $user_check_query = "SELECT * FROM users WHERE google_id='$google_id' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
+  
+  if ($user) { // if user exists
+    $_SESSION['email_address'] = $email_address;
+    $_SESSION['full_name'] = $full_name;
+    $_SESSION['success'] = "You are now logged in";
+    header('location: ../index.php');
+  } else {
+    $query = "INSERT INTO users (full_name, google_id, email_address) 
+  			  VALUES('$full_name', '$google_id', '$email_address')";
+    mysqli_query($db, $query);
+  	$_SESSION['email_address'] = $email_address;
+    $_SESSION['full_name'] = $full_name;
+  	$_SESSION['success'] = "You are now logged in";
+  	header('location: ../index.php');
   }
 }
 

@@ -128,7 +128,7 @@ td:nth-child(even) {
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
                         <?php  if (isset($_SESSION['email_address'])) : ?>
-                        <a class="nav-link" href="#">Hello, <?php echo $_SESSION['full_name']; ?>Mohammad</a>
+                        <a class="nav-link" href="#">Hello, <?php echo $_SESSION['full_name']; ?></a>
                         <?php endif ?>
                     </li>
                     <li class="nav-item">

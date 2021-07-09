@@ -2846,9 +2846,24 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 .service_icon{
     margin-bottom: 30px;
     display: inline-block;
-    max-width: 150px;
-    min-height: 60px
+    /* max-width: 150px; */
+    min-height: 60px;
+    width: 130%;
+    position: relative;
+    left: -15%;
 }
+
+@media (max-width: 768px) {
+    .service_icon {
+        width: 80%;
+        left: inherit;
+    }
+}
+
+.service_icon img {
+    width: 100%;
+}
+
 .service_single_content h6 {
     margin-bottom: 15px;
     font-size: 18px
@@ -3849,13 +3864,32 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 /* ##### 11.0 Price Table Area CSS ##### */
 .pricing-item {
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.25);
     border: solid 1px rgba(255,255,255,0.25);
     text-align: center;
     padding: 30px 0 20px;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     cursor: pointer;
 }
+
+.pricing-item.active {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.pricing-item-progress {
+    height: 30px;
+    border-radius: 10px;
+    
+}
+
+.pricing-item-progress .bg-warning, .pricing-item-progress .bg-white{
+    color: black!important;
+}
+
+.pricing-button {
+    border-radius: 10px;
+}
+
 .pricing-item h4{
     font-size: 14px;
     font-weight: bold;
@@ -4016,29 +4050,64 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 
 /* ##### 13.0 Team Area CSS ##### */
 
+.sing-team-member-wrapper {
+    
+}
+
 .single-team-member {
     position: relative;
     z-index: 1;
-    padding: 30px 10px;
-    margin:10px;
+    padding: 15px 10px;
+    margin:5px 10px;
+    background-color: #a97799;
+    border: 2px solid #76b9ed;
+}
+
+.single-team-member-wrapper .key-proof, .single-team-member-wrapper .bsc-scan {
+    background-color: #a97799;
+    margin:5px 10px;
+}
+
+.single-team-member-wrapper .key-proof a, .single-team-member-wrapper .bsc-scan a {
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+}
+
+.single-team-member-wrapper .key-proof img, .single-team-member-wrapper .bsc-scan img {
+    width: 30px;
+    float: left;
+    
+}
+
+.single-team-member-wrapper .key-proof span, .single-team-member-wrapper .bsc-scan span {
+    vertical-align: sub;
+    margin-left: 10px;
 }
 
 .team-member-thumb {
-    width: 100px;
-    height: 100px;
+    width: 90%;
+    /* height: 100px; */
     overflow: hidden;
     position: relative;
     border-radius: 50%;
     margin:0 auto;
     margin-bottom: 20px;
-    border:5px solid white
+    border:5px solid #f1b909
 }
+
+.team-member-thumb img {
+    width: 100%;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+
 .team-info {
     margin:0px auto;
 }
 
 .team-info h5 {
-    color: #7057f9;
+    color: #f1b909;
     text-transform: uppercase;
     font-size: 18px;
     text-align: center;
@@ -4046,7 +4115,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 .team-info p {
-    color: #a592b4;
+    color: black;
     text-transform: uppercase;
     font-size: 13px;
     margin-bottom: 0;
@@ -6024,4 +6093,10 @@ body.light-version {
 }
 .preview-demo:hover{
     color: #333
+}
+
+.game-box {
+    width: 100%;
+    height: 100vh;
+    display: block;
 }

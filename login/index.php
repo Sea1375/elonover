@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="https://www.freelancer.com/u/friendstelecom">
     <meta name="author" content="Sagar Nath">
-	<meta name="google-signin-client_id" content="140439635114-vsm39kijghfeknth9igt1vuaq0gnjgb4.apps.googleusercontent.com">
+
     <title>Log In | ElonOver</title>
 
     <!-- Favicons-->
@@ -29,7 +29,8 @@
     <!-- YOUR CUSTOM CSS -->
     <link href="../contact-login-signup-css/custom.css" rel="stylesheet">
 
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/api:client.js"></script>
 </head>
 
 <body>
@@ -44,16 +45,16 @@
 	                <a href="https://elonover.io" id="logo"><img src="img/logo46-40.png" alt="" width="46" height="40"></a>
 	                <div id="social">
 	                    <ul>
-	                        <li><a href="https://www.freelancer.com/u/friendstelecom" target="_blank"><i class="social_facebook"></i></a></li>
-	                        <li><a href="https://www.freelancer.com/u/friendstelecom" target="_blank"><i class="social_twitter"></i></a></li>
-	                        <li><a href="https://www.freelancer.com/u/friendstelecom" target="_blank"><i class="social_instagram"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCILMMq4EirDeBXcb2jtqcSQ" target="_blank"><i class="social_youtube"></i></a></li>
+	                        <li><a href="https://twitter.com/ElonOver" target="_blank"><i class="social_twitter"></i></a></li>
+	                        <li><a href="https://discord.gg/cQFDuCkxtw" target="_blank"><i class="social_instagram"></i></a></li>
 	                    </ul>
 	                </div>
 	                <!-- /social -->
 	                <div>
-	                    <h1>Log In For Play</h1>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	                    <a href="https://elonover.io" class="btn_1 rounded pulse_bt">Back To Home</a>
+	                    <h1>Login to Join ElonOver community.</h1>
+	                    <p>Join our community to show support of crypto world and stop Elon Musk’s Fudding.</p>
+	                    <a href="../" class="btn_1 rounded pulse_bt">Back To Home</a>
 	                </div>
 	            </div>
 	        </div>
@@ -64,9 +65,9 @@
 	                        <h4 class="mb-3">Login</h4>
 	                        <form class="input_style_1" method="post" action="index.php">
 	                            <?php include('../database/errors.php'); ?>
-	                            <a href="#0" class="social_bt facebook">Login with Apple</a>
-								<a href="#0" class="social_bt google">Login with Google</a>
-								<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	                            <!-- <a href="#0" class="social_bt facebook">Login with Apple</a> -->
+								<a id="google-signin" href="#0" class="social_bt google">Login with Google</a>
+								
 								<div class="divider"><span>Or</span></div>
 	                            <div class="form-group">
 	                                <label for="email_address">Email Address</label>
@@ -115,6 +116,6 @@
     <script src="../contact-login-signup-js/common_scripts.js"></script>
     
 	<script src="../contact-login-signup-js/common_func.js"></script>
-   
+	<script src="../js/social.js"></script>
 </body>
 </html>

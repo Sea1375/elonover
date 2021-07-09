@@ -45,15 +45,15 @@
 	                <a href="../" id="logo"><img src="img/logo46-40.png" alt="" width="46" height="40"></a>
 	                <div id="social">
 	                    <ul>
-	                        <li><a href="https://www.freelancer.com/u/friendstelecom" target="_blank"><i class="social_facebook"></i></a></li>
-	                        <li><a href="https://www.freelancer.com/u/friendstelecom" target="_blank"><i class="social_twitter"></i></a></li>
-	                        <li><a href="https://www.freelancer.com/u/friendstelecom" target="_blank"><i class="social_instagram"></i></a></li>
+	                        <li><a href="https://www.youtube.com/channel/UCILMMq4EirDeBXcb2jtqcSQ" target="_blank"><i class="social_youtube"></i></a></li>
+	                        <li><a href="https://twitter.com/ElonOver" target="_blank"><i class="social_twitter"></i></a></li>
+	                        <li><a href="https://discord.gg/cQFDuCkxtw" target="_blank"><i class="social_instagram"></i></a></li>
 	                    </ul>
 	                </div>
 	                <!-- /social -->
 	                <div>
-	                    <h1>Sign Up For Play</h1>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	                    <h1>Register to Join ElonOver community. </h1>
+	                    <p>Join our community to show support of crypto world and stop Elon Musk’s Fudding.</p>
 	                    <a href="../" class="btn_1 rounded pulse_bt">Back To Home</a>
 	                </div>
 	            </div>
@@ -64,9 +64,9 @@
 	                    <div class="col-lg-9 col-xl-7 mx-auto">
 	                        <h4 class="mb-3">Sign Up</h4>
 	                        <form class="input_style_1" method="post" action="index.php">
-	                            <a href="#0" class="social_bt facebook">Register with Apple</a>
-								<a href="#0" class="social_bt google">Register with Google</a>
-								<div class="divider"><span>Or</span></div>
+	                            <!-- <a href="#0" class="social_bt facebook">Register with Apple</a> -->
+								<!-- <a href="#0" class="social_bt google">Register with Google</a> -->
+								<!-- <div class="divider"><span>Or</span></div> -->
 	                            <?php include('../database/errors.php'); ?>
 	                        	<input id="website" name="website" type="text" value="">
 								<!-- Leave for security protection, read docs for details -->
@@ -81,7 +81,7 @@
 	                            
 	                            <div class="form-group">
 	                                <label for="email_address">Email Address</label>
-	                                <input type="email" name="email_address" value="<?php echo $email; ?>" id="email_address" class="form-control" required>
+	                                <input type="email" name="email_address" value="<?php echo $email_address; ?>" id="email_address" class="form-control" required>
 	                            </div>
 	                            <div class="form-group">
 	                                <label for="password1">Password</label>

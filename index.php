@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-lg-6 mb-sm-30 mb-md-30">
                     <div class="embed-responsive embed-responsive-16by9 fadeInUp" data-wow-delay="0.5s">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iq41_7oqvms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QrtiWQEBgnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>
@@ -229,71 +229,151 @@
         <div class="row d-flex justify-content-center">
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2" style="padding:0px;">
-                <div class="row align-items-center single-team-member fadeInUp border border-white" data-wow-delay="0.2s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/others/1.png" class="center-block" alt="">
+                <div class="single-team-member-wrapper">
+                    <div class="row single-team-member fadeInUp" data-wow-delay="0.2s">
+                        <!-- Image -->
+                        <div class="team-member-thumb">
+                            <img src="img/others/1.png" class="center-block" alt="">
+                        </div>
+                        <!-- Team Info -->
+                        <div class="team-info">
+                            <p class="font-weight-bold">Max Keiser</p>
+                            <h5 class="">1,000,000</h5>
+                        </div>
                     </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <p class="g-text">Max Keiser</p>
-                        <h5 class="w-text">1,000,000</h5>
+
+                    <div class="key-proof text-center">
+                        <a class="clearfix d-block" href="#">
+                            <img src="img/others/key_proof.png" />
+                            <span>Key Proof</span>
+                        </a>
+                    </div>
+
+                    <div class="bsc-scan text-center">
+                        <a class="clearfix d-block" href="https://bscscan.com/address/0xfA45b0f5db1FE9040e493F3cA1855644e368A132" target="_blank">
+                            <img src="img/others/bsc_scan.png" />
+                            <span>BSC SCAN</span>
+                        </a>
                     </div>
                 </div>
             </div>
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2 " style="padding:0px;">
-                <div class="row single-team-member fadeInUp border border-white" data-wow-delay="0.3s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/others/2.png" class="center-block" alt="">
+                <div class="single-team-member-wrapper">
+                    <div class="row single-team-member fadeInUp" data-wow-delay="0.3s">
+                        <!-- Image -->
+                        <div class="team-member-thumb">
+                            <img src="img/others/2.png" class="center-block" alt="">
+                        </div>
+                        <!-- Team Info -->
+                        <div class="team-info">
+                            <p class="font-weight-bold">Michael Saylor</p>
+                            <h5 class="">1,000,000</h5>
+                        </div>
                     </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <p class="g-text">Michael Saylor</p>
-                        <h5 class="w-text">1,000,000</h5>
+
+                    <div class="key-proof text-center">
+                        <a class="clearfix d-block"  href="#">
+                            <img src="img/others/key_proof.png" />
+                            <span>Key Proof</span>
+                        </a>
                     </div>
-                </div>
-            </div>
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
-                <div class="row single-team-member fadeInUp border border-white" data-wow-delay="0.4s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/others/3.png" class="center-block" alt="">
-                    </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <p class="g-text">Chamath</p>
-                        <h5 class="w-text">1,000,000</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
-                <div class="row single-team-member fadeInUp border border-white" data-wow-delay="0.5s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/others/4.png" class="center-block" alt="">
-                    </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <p class="g-text">Vitalik</p>
-                        <h5 class="w-text">1,000,000</h5>
+
+                    <div class="bsc-scan text-center">
+                        <a class="clearfix d-block" href="https://bscscan.com/address/0x70dF1bcB7Cdd393B71b562B4F37A5bcc25bd6388" target="_blank">
+                            <img src="img/others/bsc_scan.png" />
+                            <span>BSC SCAN</span>
+                        </a>
                     </div>
                 </div>
             </div>
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
-                <div class="row single-team-member fadeInUp border border-white" data-wow-delay="0.5s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/others/5.png" class="center-block" alt="">
+                <div class="single-team-member-wrapper">
+                    <div class="row single-team-member fadeInUp" data-wow-delay="0.4s">
+                        <!-- Image -->
+                        <div class="team-member-thumb">
+                            <img src="img/others/3.png" class="center-block" alt="">
+                        </div>
+                        <!-- Team Info -->
+                        <div class="team-info">
+                            <p class="font-weight-bold">Chamath</p>
+                            <h5 class="">1,000,000</h5>
+                        </div>
                     </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <p class="g-text">Mr. President</p>
-                        <h5 class="w-text">1,000,000</h5>
+
+                    <div class="key-proof text-center">
+                        <a class="clearfix d-block"  href="#">
+                            <img src="img/others/key_proof.png" />
+                            <span>Key Proof</span>
+                        </a>
+                    </div>
+
+                    <div class="bsc-scan text-center">
+                        <a class="clearfix d-block" href="https://bscscan.com/address/0x1142691F7da2bc6ed27c0b0788F9C233a32CDe61" target="_blank">
+                            <img src="img/others/bsc_scan.png" />
+                            <span>BSC SCAN</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team Member -->
+            <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
+                <div class="single-team-member-wrapper">
+                    <div class="row single-team-member fadeInUp" data-wow-delay="0.5s">
+                        <!-- Image -->
+                        <div class="team-member-thumb">
+                            <img src="img/others/4.png" class="center-block" alt="">
+                        </div>
+                        <!-- Team Info -->
+                        <div class="team-info">
+                            <p class="font-weight-bold">Vitalik</p>
+                            <h5 class="">1,000,000</h5>
+                        </div>
+                    </div>
+
+                    <div class="key-proof text-center">
+                        <a class="clearfix d-block"  href="#">
+                            <img src="img/others/key_proof.png" />
+                            <span>Key Proof</span>
+                        </a>
+                    </div>
+
+                    <div class="bsc-scan text-center">
+                        <a class="clearfix d-block" href="https://bscscan.com/address/0xB6be89664Ee2CfBE21FA33D32C34cf15Df35DF6f" target="_blank">
+                            <img src="img/others/bsc_scan.png" />
+                            <span>BSC SCAN</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Team Member -->
+            <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
+                <div class="single-team-member-wrapper">
+                    <div class="row single-team-member fadeInUp" data-wow-delay="0.5s">
+                        <!-- Image -->
+                        <div class="team-member-thumb">
+                            <img src="img/others/5.png" class="center-block" alt="">
+                        </div>
+                        <!-- Team Info -->
+                        <div class="team-info">
+                            <p class="font-weight-bold">Mr. President</p>
+                            <h5 class="">1,000,000</h5>
+                        </div>
+                    </div>
+
+                    <div class="key-proof text-center">
+                        <a class="clearfix d-block"  href="#">
+                            <img src="img/others/key_proof.png" />
+                            <span>Key Proof</span>
+                        </a>
+                    </div>
+
+                    <div class="bsc-scan text-center">
+                        <a class="clearfix d-block" href="https://bscscan.com/address/0xf748C8102C788d17d7ceA6e87b01592e9202805D" target="_blank">
+                            <img src="img/others/bsc_scan.png" />
+                            <span>BSC SCAN</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -336,7 +416,7 @@
             </div>
             <h2 class="fadeInUp" data-wow-delay="0.3s">Our Token Prices</h2>
         </div>
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="pricing-item ">
                     <h4>Round 1</h4> 
@@ -345,15 +425,25 @@
                     <div class="pricing">Tokens</div> 
                     <label><strong style="font-size: 12px;">Investors Locked for 2 Years</strong></label>
                 </div>
+
+                <div class="progress pricing-item-progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuemax="100">100%</div>
+                </div>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="pricing-item ">
+                <div class="pricing-item active">
                     <h4>Round 2</h4> 
                     <h3><strong class="xzc-1-month">0.10$</strong></h3> 
                     <span>5,000,000</span> 
                     <div class="pricing">Tokens</div> 
                     <label><strong style="font-size: 12px;">One life time chance</strong></label>
                 </div>
+
+                <div class="progress pricing-item-progress mb-3">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuemax="100">30%</div>
+                </div>
+
+                <button type="button" class="pricing-button btn btn-primary btn-sm btn-block">Buy with Crypto</button>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="pricing-item ">
@@ -363,6 +453,10 @@
                     <div class="pricing">Tokens</div> 
                     <label><strong style="font-size: 12px;">Catch it if you can</strong></label>
                 </div>
+
+                <div class="progress pricing-item-progress">
+                    <div class="progress-bar bg-white text-white" role="progressbar" style="width: 100%" aria-valuemax="100">SOON</div>
+                </div>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="pricing-item ">
@@ -370,6 +464,10 @@
                     <img src="img/others/pngwing.png" width="127px">
                     <h3></h3>
                     <label><strong style="font-size: 12px;">Apollo Mission Launched</strong></label>
+                </div>
+
+                <div class="progress pricing-item-progress">
+                    <div class="progress-bar bg-white text-white" role="progressbar" style="width: 100%" aria-valuemax="100">COMING</div>
                 </div>
             </div>
         </div>
@@ -382,11 +480,15 @@
 <!-- ##### Web Game Box start ##### -->
 <section class="about-us-area section-padding-0-100 clearfix">
     <div class="container" style="border:3px solid white;">
-        <div class="section-heading text-center">
+        <div class="">
             <!-- Dream Dots -->
-            <h2 class="fadeInUp" data-wow-delay="0.3s">Web Game Box</h2>
+            <!-- <h2 class="fadeInUp" data-wow-delay="0.3s">Web Game Box</h2> -->
+
+            <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe>
         </div>
     </div>
+
+    
 </section>
 <!-- ##### Web Game Box End ##### -->
 
@@ -480,7 +582,7 @@
                     <!-- Icon -->
                     <h6>If you invest</h6>
                     <div class="service_icon">
-                        <img src="img/others/100.png" alt="">
+                        <img src="img/others/11.png" alt="">
                     </div>
                 </div>
             </div>
@@ -490,7 +592,7 @@
                     <!-- Icon -->
                     <h6>10x</h6>
                     <div class="service_icon">
-                        <img src="img/others/1000.png" alt="">
+                        <img src="img/others/12.png" alt="">
                     </div>
                 </div>
             </div>
@@ -500,7 +602,7 @@
                     <!-- Icon -->
                     <h6>100x</h6>
                     <div class="service_icon">
-                        <img src="img/others/10000.png" alt="">
+                        <img src="img/others/13.png" alt="">
                     </div>
                 </div>
             </div>
@@ -510,7 +612,7 @@
                         <!-- Icon -->
                     <h6>1000x</h6>
                     <div class="service_icon">
-                        <img src="img/others/100000.png" alt="">
+                        <img src="img/others/14.png" alt="">
                     </div>
                 </div>
             </div>
@@ -520,7 +622,7 @@
                     <!-- Icon -->
                     <h6>1000x</h6>
                     <div class="service_icon">
-                        <img src="img/others/1000000.png" alt="">
+                        <img src="img/others/15.png" alt="">
                     </div>
                 </div>
             </div>
@@ -537,7 +639,7 @@
             <span>ICO Roadmap</span>
         </div>
         <h2 class="fadeInUp" data-wow-delay="0.3s">Our ICO Roadmap</h2>
-        <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+        <!-- <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p> -->
     </div>
     <div class="container">
         <div class="row">
@@ -676,19 +778,23 @@
             <div class="col-12 col-lg-12 col-md-12">
                 <div class="section-heading text-center" style="margin-bottom: 0px;">
                     <!-- Dream Dots -->
-                    <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <!-- <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
                         <div class="footer-logo  justify-content-center">
                             <a href="https://elonover.io"><img style="width:100px;" src="img/others/logoforfooter.png" alt="logo"> ElonOver.io</a>
                         </div>
-                    </div>
+                    </div> -->
                     <p class="fadeInUp" data-wow-delay="0.4s">© 2021 ElonOver.io - All Rights Reserved.</p>
                     <!-- Social Icon -->
                     <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <!-- <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                         <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> -->
+
+                        <a href="https://www.youtube.com/channel/UCILMMq4EirDeBXcb2jtqcSQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/ElonOver" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://discord.gg/cQFDuCkxtw" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
