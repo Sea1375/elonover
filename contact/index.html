@@ -47,7 +47,9 @@
 	                    <ul>
 	                        <li><a href="https://www.youtube.com/channel/UCILMMq4EirDeBXcb2jtqcSQ" target="_blank"><i class="social_youtube"></i></a></li>
 	                        <li><a href="https://twitter.com/ElonOver" target="_blank"><i class="social_twitter"></i></a></li>
-	                        <li><a href="https://discord.gg/cQFDuCkxtw" target="_blank"><i class="social_instagram"></i></a></li>
+	                        <li><a href="https://discord.gg/cQFDuCkxtw" target="_blank">
+								<img src="../img/others/discord.png" class="discord-icon" />
+							</a></li>
 	                    </ul>
 	                </div>
 	                <!-- /social -->

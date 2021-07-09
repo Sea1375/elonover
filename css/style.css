@@ -6100,3 +6100,8 @@ body.light-version {
     height: 100vh;
     display: block;
 }
+
+.discord-icon {
+    width: 18px;
+    vertical-align: sub;
+}

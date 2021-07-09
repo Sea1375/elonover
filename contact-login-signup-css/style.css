@@ -1327,3 +1327,8 @@ span.error:after {
   padding-top: 60px;
   padding-bottom: 35px;
 }
+
+.discord-icon {
+  width: 20px;
+  vertical-align: sub;
+}

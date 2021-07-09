@@ -794,7 +794,10 @@
 
                         <a href="https://www.youtube.com/channel/UCILMMq4EirDeBXcb2jtqcSQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                         <a href="https://twitter.com/ElonOver" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="https://discord.gg/cQFDuCkxtw" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://discord.gg/cQFDuCkxtw" target="_blank">
+							<img src="img/others/discord.png" class="discord-icon" />
+						</a>
+                        <!-- <a href="https://discord.gg/cQFDuCkxtw" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
                     </div>
                 </div>
             </div>
