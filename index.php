@@ -233,7 +233,9 @@
                     <div class="row single-team-member fadeInUp" data-wow-delay="0.2s">
                         <!-- Image -->
                         <div class="team-member-thumb">
-                            <img src="img/others/1.png" class="center-block" alt="">
+                            <a href="https://twitter.com/maxkeiser" target="_blank">
+                                <img src="img/others/1.png" class="center-block" alt="">
+                            </a>
                         </div>
                         <!-- Team Info -->
                         <div class="team-info">
@@ -263,7 +265,9 @@
                     <div class="row single-team-member fadeInUp" data-wow-delay="0.3s">
                         <!-- Image -->
                         <div class="team-member-thumb">
-                            <img src="img/others/2.png" class="center-block" alt="">
+                            <a href="https://twitter.com/michael_saylor" target="_blank">
+                                <img src="img/others/2.png" class="center-block" alt="">
+                            </a>
                         </div>
                         <!-- Team Info -->
                         <div class="team-info">
@@ -293,7 +297,9 @@
                     <div class="row single-team-member fadeInUp" data-wow-delay="0.4s">
                         <!-- Image -->
                         <div class="team-member-thumb">
-                            <img src="img/others/3.png" class="center-block" alt="">
+                            <a href="https://twitter.com/chamath" target="_blank">
+                                <img src="img/others/3.png" class="center-block" alt="">
+                            </a>
                         </div>
                         <!-- Team Info -->
                         <div class="team-info">
@@ -323,7 +329,9 @@
                     <div class="row single-team-member fadeInUp" data-wow-delay="0.5s">
                         <!-- Image -->
                         <div class="team-member-thumb">
-                            <img src="img/others/4.png" class="center-block" alt="">
+                            <a href="https://twitter.com/vitalikbuterin" target="_blank">
+                                <img src="img/others/4.png" class="center-block" alt="">
+                            </a>
                         </div>
                         <!-- Team Info -->
                         <div class="team-info">
@@ -353,7 +361,9 @@
                     <div class="row single-team-member fadeInUp" data-wow-delay="0.5s">
                         <!-- Image -->
                         <div class="team-member-thumb">
-                            <img src="img/others/5.png" class="center-block" alt="">
+                            <a href="https://twitter.com/nayibbukele" target="_blank">
+                                <img src="img/others/5.png" class="center-block" alt="">
+                            </a>
                         </div>
                         <!-- Team Info -->
                         <div class="team-info">

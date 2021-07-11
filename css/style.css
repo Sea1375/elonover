@@ -4096,6 +4096,12 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     border:5px solid #f1b909
 }
 
+.team-member-thumb a {
+    display: block;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 .team-member-thumb img {
     width: 100%;
     border-radius: 100%;
@@ -4109,7 +4115,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 .team-info h5 {
     color: #f1b909;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: x-large;
     text-align: center;
     margin-bottom: 0px auto;
 }
