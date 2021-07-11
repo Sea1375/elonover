@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-lg-6 mb-sm-30 mb-md-30">
                     <div class="embed-responsive embed-responsive-16by9 fadeInUp" data-wow-delay="0.5s">
-                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QrtiWQEBgnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QrtiWQEBgnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

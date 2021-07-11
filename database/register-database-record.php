@@ -15,7 +15,7 @@ $errors = array();
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
   $full_name = mysqli_real_escape_string($db, $_POST['full_name']);
-  $user_id = mysqli_real_escape_string($db, $_POST['user_id']);
+  // $user_id = mysqli_real_escape_string($db, $_POST['user_id']);
   $email_address = mysqli_real_escape_string($db, $_POST['email_address']);
   $password1 = mysqli_real_escape_string($db, $_POST['password1']);
   $password2 = mysqli_real_escape_string($db, $_POST['password2']);
@@ -23,7 +23,7 @@ if (isset($_POST['reg_user'])) {
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($full_name)) { array_push($errors, "full_name Field is required"); }
-  if (empty($user_id)) { array_push($errors, "User ID Field is required"); }
+  // if (empty($user_id)) { array_push($errors, "User ID Field is required"); }
   if (empty($email_address)) { array_push($errors, "Email Field is required"); }
   if (empty($password1)) { array_push($errors, "Password Field is required"); }
   if ($password1 != $password2) {
@@ -32,14 +32,14 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM users WHERE user_id='$user_id' OR email_address='$email_address' LIMIT 1";
+  $user_check_query = "SELECT * FROM users WHERE email_address='$email_address' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { // if user exists
-    if ($user['user_id'] === $user_id) {
-      array_push($errors, "User ID already exists");
-    }
+    // if ($user['user_id'] === $user_id) {
+    //   array_push($errors, "User ID already exists");
+    // }
 
     if ($user['email_address'] === $email_address) {
       array_push($errors, "email already exists");
@@ -50,8 +50,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	
 
-  	$query = "INSERT INTO users (full_name, user_id, email_address, password) 
-  			  VALUES('$full_name', '$user_id', '$email_address', '$password1')";
+  	$query = "INSERT INTO users (full_name, email_address, password) 
+  			  VALUES('$full_name', '$email_address', '$password1')";
   	mysqli_query($db, $query);
   	$_SESSION['email_address'] = $email_address;
     $_SESSION['full_name'] = $full_name;

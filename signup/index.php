@@ -76,10 +76,10 @@
 	                                <label for="full_name">Full Name</label>
 	                                <input type="text" name="full_name" id="full_name" class="form-control" required>
 	                            </div>
-	                            <div class="form-group">
+	                            <!-- <div class="form-group">
 	                                <label for="user_id">User ID #123456</label>
 	                                <input type="number" name="user_id" value="<?php echo $user_id; ?>" id="user_id" class="form-control" required>
-	                            </div>
+	                            </div> -->
 	                            
 	                            <div class="form-group">
 	                                <label for="email_address">Email Address</label>
