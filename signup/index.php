@@ -209,6 +209,7 @@
 					<p>Cryptographic tokens such as ELOV are a new and untested technology. In addition to the risks included in this Annex A of these Terms, there are other risks associated with your purchase, possession and use of ELOV, including unanticipated risks. Such risks may further materialize as unanticipated variations or combinations of the risks discussed in this Annex A of these Terms.</p>
 					
 				</div>
+				
 				<div class="modal-footer">
 					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
 				</div>
