@@ -1332,3 +1332,16 @@ span.error:after {
   width: 20px;
   vertical-align: sub;
 }
+
+.terms {
+
+}
+
+.terms ol {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.terms li {
+  margin-top: 5px;
+}
