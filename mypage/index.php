@@ -162,7 +162,7 @@ td:nth-child(even) {
                                 </tr>
                             </table>
                             <div class="text-center">
-                                <a class="btn dream-btn fadeInUp" data-wow-delay="0.6s" href="#">Buy More</a>
+                                <a class="btn dream-btn fadeInUp" data-wow-delay="0.6s" href="#"  data-toggle="modal" data-target="#modal-purchase">Buy More</a>
                             </div>
                         </div>
                     </div>
@@ -252,6 +252,76 @@ td:nth-child(even) {
 </section>
 <!-- ##### About Us Area End ##### -->
 
+<!-- Modal terms -->
+<div class="modal fade" id="modal-purchase" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Token Purchase</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+                    <form id="form_buy" action="../payment/index.php" method="post" target="_blank">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="top border border-primary p-3">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="bg-green">
+                                                <span>Tokens</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <input class="form-control" type="number" id="buy_amount" name="buy_amount"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="bg-info">
+                                                <span>Cost</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-6">
+                                            <input  class="form-control" type="number" id="buy_cost" name="buy_cost" readonly/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom border border-primary mt-3 p-3">
+                                    <div class="">
+                                        <div class="bg-yellow mb-2">
+                                            <span>Your Wallet Address to Receive Tokens</span>
+                                        </div>
+                                        <div>
+                                            <input class="form-control" id="wallet_address" name="wallet_address"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="agree-terms mt-2">
+                                        <input type="checkbox" name="agree" id="agree" value="Yes" required>
+                                        <label for="agree"><i>Agree to Terms & Conditions</i></label>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <a class="btn dream-btn fadeInUp d-block" data-wow-delay="0.6s" id="btn_buy">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="services-block-four v2 text-center" style="background-color: rgba(255,255,255,0.05)">
+                                    <img src="../img/others/elonover-pic.png" alt="" width="177px" >
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
     
     <!-- ########## All JS ########## -->
     <!-- jQuery js -->
@@ -269,6 +339,8 @@ td:nth-child(even) {
 
     <!-- script js -->
     <script src="../js/script.js"></script>
+
+    <script src="../js/token_purchase.js"></script>
 
 </body>
 </html>

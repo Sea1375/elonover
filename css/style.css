@@ -6112,3 +6112,38 @@ body.light-version {
     vertical-align: sub;
 }
 
+#modal-purchase h4{
+    color: black;
+}
+
+#modal-purchase .top .bg-green {
+    background-color: #25ce9c;
+    height: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#modal-purchase .top, #modal-purchase .bottom {
+    border-color: #454079!important;
+}
+
+#modal-purchase .top .bg-info {
+    background-color: #00b0f0!important;
+    height: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+#modal-purchase .bottom .bg-yellow {
+    background: #ffc000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}

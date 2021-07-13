@@ -50,12 +50,22 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	
 
+    //// register
   	$query = "INSERT INTO users (full_name, email_address, password) 
   			  VALUES('$full_name', '$email_address', '$password1')";
   	mysqli_query($db, $query);
-  	$_SESSION['email_address'] = $email_address;
-    $_SESSION['full_name'] = $full_name;
-  	$_SESSION['success'] = "You are now logged in";
+
+
+    /// login after register
+    $query = "SELECT * FROM users WHERE email_address='$email_address' AND password='$password1'";
+  	$results = mysqli_query($db, $query);
+    $user = mysqli_fetch_assoc($results);
+
+    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['email_address'] = $user['email_address'];
+    $_SESSION['full_name'] = $user['full_name'];
+    $_SESSION['success'] = "You are now logged in";
+
   	header('location: ../index.php');
   }
 }
@@ -78,10 +88,13 @@ if (isset($_POST['login_user'])) {
   	
   	$query = "SELECT * FROM users WHERE email_address='$email_address' AND password='$password'";
   	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['email_address'] = $email_address;
-      $_SESSION['full_name'] = $full_name;
-  	  $_SESSION['success'] = "You are now logged in";
+    $user = mysqli_fetch_assoc($results);
+
+  	if ($user) {
+  	  $_SESSION['user_id'] = $user['id'];
+      $_SESSION['email_address'] = $user['email_address'];
+      $_SESSION['full_name'] = $user['full_name'];
+      $_SESSION['success'] = "You are now logged in";
   	  header('location: ../index.php');
   	}else {
   		array_push($errors, "Wrong email/password combination");
@@ -101,17 +114,24 @@ if (isset($_POST['google_signin'])) {
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { // if user exists
-    $_SESSION['email_address'] = $email_address;
-    $_SESSION['full_name'] = $full_name;
+    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['email_address'] = $user['email_address'];
+    $_SESSION['full_name'] = $user['full_name'];
     $_SESSION['success'] = "You are now logged in";
     header('location: ../index.php');
   } else {
     $query = "INSERT INTO users (full_name, google_id, email_address) 
   			  VALUES('$full_name', '$google_id', '$email_address')";
     mysqli_query($db, $query);
-  	$_SESSION['email_address'] = $email_address;
-    $_SESSION['full_name'] = $full_name;
-  	$_SESSION['success'] = "You are now logged in";
+
+    $user_check_query = "SELECT * FROM users WHERE google_id='$google_id' LIMIT 1";
+    $result = mysqli_query($db, $user_check_query);
+    $user = mysqli_fetch_assoc($result);
+
+  	$_SESSION['user_id'] = $user['id'];
+    $_SESSION['email_address'] = $user['email_address'];
+    $_SESSION['full_name'] = $user['full_name'];
+    $_SESSION['success'] = "You are now logged in";
   	header('location: ../index.php');
   }
 }
