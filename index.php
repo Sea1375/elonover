@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-lg-6 mb-sm-30 mb-md-30">
                     <div class="embed-responsive embed-responsive-16by9 fadeInUp" data-wow-delay="0.5s">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QrtiWQEBgnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QrtiWQEBgnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>
@@ -412,6 +412,150 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="users">
+                    <div class="left-scroll">
+                        <img src="img/others/icon-left.png" />
+                    </div>
+                    <div class="right-scroll">
+                        <img src="img/others/icon-right.png" />
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">10000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">20000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">30000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">40000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">50000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">60000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">70000</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">80000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row" style="height: 100%">
+                    <div class="col-6">
+                        <div class="blocks">
+                            <h5 class="title">Blocks</h5>
+                            <p>35,145</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="punchs">
+                            <h5 class="title">Punches</h5>
+                            <p>15,635,145</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!-- ##### Innovation of Fun End ##### -->
@@ -494,7 +638,7 @@
             <!-- Dream Dots -->
             <!-- <h2 class="fadeInUp" data-wow-delay="0.3s">Web Game Box</h2> -->
 
-            <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe>
+            <!-- <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe> -->
         </div>
     </div>
 
@@ -652,131 +796,229 @@
         <!-- <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p> -->
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="main-timeline">
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date"> <span class="month">Kick</span> <span class="year">Off</span> </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <p class="description text-light-gray">Roadmap Development
-                                </p>
-                            <p class="description text-light-gray">Website Development.
-                                </p>
-                            <p class="description text-light-gray">Game Development.
-                                </p>
-                            <p class="description text-light-gray">Animation Development.
-                                </p>
-                            <p class="description text-light-gray">Smart Contract, Development.
-                                </p>
-                            <p class="description text-light-gray">Social Media Existence.
-                                </p>
+        <div class="row top d-lg-flex d-none">
+            <div class="col-lg-2 roadmap-sp"></div>
+            <div class="col-lg-10 roadmap-row">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box-roadmap r2">
+                            <p class="title">Round 1</p>
+                            <ul>
+                                <li>Allocation of 5,000,000 tokens to initial investors of big fists.</li>
+                                <li>Initial Marketing.</li>
+                            </ul>
+                            
+                            <div class="line"></div>
+                            <img src="img/others/r2.png"/>
+                            
                         </div>
                     </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date"> <span class="month">Round</span> <span class="year">1</span> </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <p class="description text-light-gray"><br><br>Allocation of 6,000,000 tokens to initial investors of big fists.
-                                </p>
-                            <p class="description text-light-gray">Initial Marketing.
-                                </p>
-                            <br><br>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date"> <span class="month">Round</span> <span class="year">2</span> </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <br>
-                            <p class="description text-light-gray">Sales of 5,000,000 tokens on Round 2.</p>
-                            <p class="description text-light-gray">Reach 1M site visits.</p>
-                            <p class="description text-light-gray">Reach 100K followers on social media accounts.</p>
-                            <br><br>
+                    <div class="col-3">
+                        <div class="box-roadmap r4">
+                            <p class="title">Round 3</p>
+                            <ul>
+                                <li>Sales of 10,000,000 tokens on Round 3.</li>
+                                <li>Reach 5M site visits.</li>
+                                <li>Reach 500K followers on social media accounts.</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r4.png"/>
+                            
                         </div>
                     </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date"> <span class="month">Round</span> <span class="year">3</span> </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <br>
-                            <p class="description text-light-gray">Sales of 10,000,000 tokens on Round 3.</p>
-                            <p class="description text-light-gray">Reach 5M site visits.</p>
-                            <p class="description text-light-gray">Reach 500K followers on social media accounts.</p>
-                            <br><br>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date" style="margin-top:20px;"> <span class="month">Youtubers</span>  </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <br>
-                            <p class="description text-light-gray">Get Featured on several Crypto Youtuber channels with >1M subscribers.</p>
-                            <p class="description text-light-gray">Reach 10M site visits.</p>
-                            <p class="description text-light-gray">Reach 1M followers</p>
-                            <br><br>
+                    <div class="col-3">
+                        <div class="box-roadmap r6">
+                            <p class="title">DEX LISTING</p>
+                            <ul>
+                                <li>Get listed on Pancake.</li>
+                                <li>Marketing @ Chinese Social Media.</li>
+                                <li>Reach 3M followers.</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r6.png"/>
                         </div>
                     </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date"> <span class="month">Dex</span> <span class="year">Listing</span> </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <p class="description text-light-gray">Get listed on Pancake.</p>
-                            <p class="description text-light-gray">Swap for Live Exchange.</p>
-                            <p class="description text-light-gray">Marketing @ Chinese Social Media.</p>
-                            <p class="description text-light-gray">Reach 10M followers.</p>
-                            <br><br>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date"> <span class="month">Cex</span> <span class="year">Listing</span> </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <br>
-                            <p class="description text-light-gray">Get Listed on big exchanges.</p>
-                            <p class="description text-light-gray">ELOV Conference</p>
-                            <p class="description text-light-gray">Reach 20M followers</p>
-                            <br><br>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer"> <span class="date" style="margin-top:20px;"> <span class="month">Beyond</span>  </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <p class="description text-light-gray">ElonOver Song by Snoop Dogg.</p>
-                            <p class="description text-light-gray">ElonOver Song by BTS.</p>
-                            <p class="description text-light-gray">Get Featured on CNBC</p>
-                            <p class="description text-light-gray">Reach 100M followers</p>
-                            <p class="description text-light-gray">Create Gaming Demand</p>
-                            <br>
+                    <div class="col-3">
+                        <div class="box-roadmap r8">
+                            <p class="title">Beyond</p>
+                            <ul>
+                                <li>ElonOver Songs </li>
+                                <li>Get Featured on TV</li>
+                                <li>Reach 10M followers</li>
+                                <li>Create Gaming Demand</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r8.png"/>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row bottom d-lg-flex d-none">
+            <div class="col-lg-10 roadmap-row">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box-roadmap r1">
+                            <p class="title">Kick Off</p>
+                            <ul>
+                                <li>Roadmap Development.</li>
+                                <li>Website Development.</li>
+                                <li>Game Development.</li>
+                                <li>Animation Development.</li>
+                                <li>Smart Contract Development.</li>
+                                <li>Social Media Existence.</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r1.png"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box-roadmap r3">
+                            <p class="title">Round 2</p>
+                            <ul>
+                                <li>Sales of 5,000,000 tokens on Round 2.</li>
+                                <li>Reach 1M site visits.</li>
+                                <li>Reach 100K followers on social media accounts.</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r3.png"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box-roadmap r5">
+                            <p class="title">YOUTUBERS</p>
+                            <ul>
+                                <li>Get Featured on several Crypto Youtuber channels  with > 1M subscribers.</li>
+                                <li>Reach 10M site visits.</li>
+                                <li>Reach 1M followers</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r5.png"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box-roadmap r7">
+                            <p class="title">CEX LISTING</p>
+                            <ul>
+                                <li>Get Listed on big exchanges.</li>
+                                <li>ELOV Conference</li>
+                                <li>RReach 5M followers</li>
+                            </ul>
+
+                            <div class="line"></div>
+                            <img src="img/others/r7.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 d-none d-lg-block roadmap-sp"></div>
+        </div>
+
+        <div class="row top d-flex d-md-flex d-lg-none">
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r1">
+                    <p class="title">Kick Off</p>
+                    <ul>
+                        <li>Roadmap Development.</li>
+                        <li>Website Development.</li>
+                        <li>Game Development.</li>
+                        <li>Animation Development.</li>
+                        <li>Smart Contract Development.</li>
+                        <li>Social Media Existence.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r2">
+                    <p class="title">Round 1</p>
+                    <ul>
+                        <li>Allocation of 5,000,000 tokens to initial investors of big fists.</li>
+                        <li>Initial Marketing.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r3">
+                    <p class="title">Round 2</p>
+                    <ul>
+                        <li>Sales of 5,000,000 tokens on Round 2.</li>
+                        <li>Reach 1M site visits.</li>
+                        <li>Reach 100K followers on social media accounts.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r4">
+                    <p class="title">Round 3</p>
+                    <ul>
+                        <li>Sales of 10,000,000 tokens on Round 3.</li>
+                        <li>Reach 5M site visits.</li>
+                        <li>Reach 500K followers on social media accounts.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r5">
+                    <p class="title">YOUTUBERS</p>
+                    <ul>
+                        <li>Get Featured on several Crypto Youtuber channels  with > 1M subscribers.</li>
+                        <li>Reach 10M site visits.</li>
+                        <li>Reach 1M followers</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r6">
+                    <p class="title">DEX LISTING</p>
+                    <ul>
+                        <li>Get listed on Pancake.</li>
+                        <li>Marketing @ Chinese Social Media.</li>
+                        <li>Reach 3M followers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r7">
+                    <p class="title">CEX LISTING</p>
+                    <ul>
+                        <li>Get Listed on big exchanges.</li>
+                        <li>ELOV Conference</li>
+                        <li>RReach 5M followers</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="box-roadmap r8">
+                    <p class="title">Beyond</p>
+                    <ul>
+                        <li>ElonOver Songs </li>
+                        <li>Get Featured on TV</li>
+                        <li>Reach 10M followers</li>
+                        <li>Create Gaming Demand</li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
@@ -830,7 +1072,9 @@
 
     <script src="js/jquery.syotimer.min.js"></script>
 
+    
     <!-- script js -->
+    <script src="js/scroll.js"></script>
     <script src="js/script.js"></script>
 
 </body>

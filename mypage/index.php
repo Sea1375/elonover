@@ -141,107 +141,165 @@ td:nth-child(even) {
             </div>
             <div class="clearfix"></div>
             <!-- ##### Token Info Start ##### -->
-            <div class="col-12 col-lg-6 offset-lg-0 col-sm-12">
-                <div class="col-lg-4 col-md-4 col-sm-12"  style="padding:0px;">
-                    <div class="services-block-four v2 text-center" style="background-color: rgba(255,255,255,0.05)">
-                        <img src="../img/others/wallet.png" alt="" width="140px" style="padding:18px 0px 18px 0px;">
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <div class="services-block-four v2"  style="background-color: rgba(255,255,255,0.05)">
-                        <div class="inner-box">
-                            <h3 class="text-center">Wallet Overview</h3>
-                            <table  class="table-custom">
-                                <tr>
-                                    <td>ELOV Balance</td>
-                                    <td>35,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Market Value, USDT</td>
-                                    <td>15,500</td>
-                                </tr>
-                            </table>
-                            <div class="text-center">
-                                <a class="btn dream-btn fadeInUp" data-wow-delay="0.6s" href="#"  data-toggle="modal" data-target="#modal-purchase">Buy More</a>
+        </div>
+        <div class="row mypage-box">
+            <div class="col-12 col-lg-5 offset-lg-0 col-sm-12 token-purchase">
+                <form id="form_buy" action="../payment/index.php" method="post" target="_blank" class="pt-2 pb-2">
+                    <div class="top border border-primary p-3">
+                        <p class="title">Token Purchase</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="bg-green">
+                                    <span>Tokens</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="number" id="buy_amount" name="buy_amount"/>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <div class="bg-info">
+                                    <span>Cost</label>
+                                </div>
+                                
+                            </div>
+                            <div class="col-6">
+                                <input  class="form-control" type="number" id="buy_cost" name="buy_cost" readonly/>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-4 col-md-4 col-sm-12"  style="padding:0px;">
-                    <div class="services-block-four v2 text-center"  style="background-color: rgba(255,255,255,0.05)">
-                            <img src="../img/others/send.png" alt="" width="140px" style="padding:32px 0px 32px 0px;">
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <div class="services-block-four v2"  style="background-color: rgba(255,255,255,0.05)">
-                        <div class="inner-box" >
-                            <h3 class="text-center">Token Transfer</h3>
-                            <div style="overflow-x:auto;">
-                                <table  class="table-custom">
-                                    <tr>
-                                        <td>Amount</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wallet</td>
-                                        <td>xvcvvxxcg3432fsdffssd988898</td>
-                                    </tr>
-                                </table>
+                    <div class="bottom border border-primary mt-3 p-3">
+                        <div class="">
+                            <div class="bg-yellow mb-2">
+                                <span>Your Wallet Address to Receive Tokens</span>
                             </div>
-                            <div class="text-center" style="margin:10px;">
-                                <a class="btn dream-btn fadeInUp" data-wow-delay="0.6s" href="#">Send</a>
+                            <div>
+                                <input class="form-control" id="wallet_address" name="wallet_address"/>
                             </div>
                         </div>
+
+                        <div class="agree-terms mt-2">
+                            <input type="checkbox" name="agree" id="agree" value="Yes" required>
+                            <label for="agree"><i>Agree to Terms & Conditions</i></label>
+                        </div>
+
+                        <div class="mt-2">
+                            <a class="btn dream-btn fadeInUp d-block" data-wow-delay="0.6s" id="btn_buy">Buy</a>
+                        </div>
                     </div>
-                </div>
+                
+                </form>
             </div>
-            <div class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-                <div class="col-lg-4 col-md-4 col-sm-12"  style="padding:0px;">
-                    <div class="services-block-four v2 text-center" style="background-color: rgba(255,255,255,0.05)">
+            <div class="col-12 col-lg-2 d-lg-flex image-wrapper"  style="padding:0px;">
+                    <div class="text-center" style="">
                         <img src="../img/others/elonover-pic.png" alt="" width="177px" >
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 mt-md-30">
-                    <div class="services-block-four v2"  style="background-color: rgba(255,255,255,0.05)">
-                        <div class="inner-box" style="padding: 10px;">
-                            <h3 class="text-center">Game Credit Balance</h3>
-                            <table  class="table-custom text-center">
-                                <tr>
-                                    <td>Start Punching</td>
-                                    <td>35,000</td>
-                                </tr>
+            <div class="col-12 col-lg-5 transaction">
+                <div class=""  style="">
+                    <div class="inner-box" style="padding: 10px;">
+                        <p class="text-center title">My Page</p>
+                        
+                        <h5 style="padding-left:5px;">My Punching Blocks</h5>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">#15,000</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">#23,547</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">#30,457</a>
+                            </li>
+                        </ul>
+                        <h5 style="padding-left:5px;">My Transactions</h5>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Amount</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-warning">pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-danger">cancelled</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-success">success</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-success">success</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-warning">pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-danger">cancelled</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-success">success</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-success">success</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-warning">pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-danger">cancelled</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-success">success</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>2021/03/23 15:00</td>
+                                        <td class="text-success">success</td>
+                                    </tr>
+                                </tbody>
                             </table>
-                            <h3 style="padding-left:5px;">My Punching Blocks</h3>
-                            <ul class="nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;" href="#">#15,000</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;" href="#">#23,547</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;" href="#">#30,457</a>
-                                </li>
-                            </ul>
-                            <h3 style="padding-left:5px;">Update Center</h3>
-                            <ul  style="padding-bottom:5px;">
-                                <li class="nav-link">
-                                    <a style="color:white;" href="#">Update 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;">Update 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;">Update 3</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;">Update 4</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color:white;">Update 5</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
