@@ -1,6 +1,8 @@
 <?php 
   session_start(); 
 
+  include('database/connection.php');
+
   if (!isset($_SESSION['email_address'])) {
   	$_SESSION['msg'] = "You must log in first";
   }
@@ -8,6 +10,29 @@
   	session_destroy();
   	unset($_SESSION['email_address']);
   }
+
+//   punches
+  $punches = 0;
+  $query = "SELECT SUM(token_amount) punches FROM purchases WHERE purchase_status = 'success';";
+  $result = mysqli_query($db, $query);
+  $row = mysqli_fetch_assoc($result);
+  if ($row) $punches = $row['punches'];
+
+/// blocks
+  $blocks = 0;
+  $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases GROUP BY block) as t1;";
+  $result = mysqli_query($db, $query);
+  $row = mysqli_fetch_assoc($result);
+  if ($row) $blocks = $row['blocks'];
+  
+// users
+  $users = [];
+  $query = "SELECT t1.*, t2.full_name FROM (SELECT sum(token_amount) amount, user_id FROM purchases WHERE purchase_status = 'success' GROUP BY user_id) t1 LEFT JOIN users t2 ON t1.user_id=t2.id;";
+  $result = mysqli_query($db, $query);
+  while($row = mysqli_fetch_assoc($result)){
+    array_push($users, $row);  
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -423,119 +448,24 @@
                         <img src="img/others/icon-right.png" />
                     </div>
                     <div class="row">
+                        <?php foreach($users as $index => $user) { ?>
+                            <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                                <div class="user" data-wow-delay="0.5s">
+                                    <!-- Image -->
+                                    <div class="user-thumb">
+                                        <a href="https://twitter.com/nayibbukele" target="_blank">
+                                            <img src="img/others/5.png" class="center-block" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- Token Info -->
+                                    <div class="user-info">
+                                        <h5 class=""><?=$user['amount']?></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
                         
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">10000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">20000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">30000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">40000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">50000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">60000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">70000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">80000</h5>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -544,13 +474,13 @@
                     <div class="col-6">
                         <div class="blocks">
                             <h5 class="title">Blocks</h5>
-                            <p>35,145</p>
+                            <p><?=$blocks?></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="punchs">
                             <h5 class="title">Punches</h5>
-                            <p>15,635,145</p>
+                            <p><?=$punches?></p>
                         </div>
                     </div>
                 </div>
