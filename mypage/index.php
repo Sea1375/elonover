@@ -1,6 +1,8 @@
 <?php 
   session_start(); 
 
+  include('../database/connection.php');
+
   if (!isset($_SESSION['email_address'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: ../');
@@ -10,6 +12,25 @@
   	unset($_SESSION['email_address']);
   	header("location: ../");
   }
+
+  $user_id = $_SESSION['user_id'];
+  $txs = [];
+
+  $query = 'SELECT * FROM purchases WHERE user_id = ' . $user_id;
+  $result = mysqli_query($db, $query);
+
+  while($row = mysqli_fetch_assoc($result)){
+    array_push($txs, $row);  
+  }
+
+  $blocks = [];
+  $query = "SELECT block FROM purchases WHERE user_id = ".$user_id." and block <> '' GROUP BY block;";
+  $result = mysqli_query($db, $query);
+
+  while($row = mysqli_fetch_assoc($result)){
+    array_push($blocks, $row['block']);  
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -203,15 +224,12 @@ td:nth-child(even) {
                         
                         <h5 style="padding-left:5px;">My Punching Blocks</h5>
                         <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">#15,000</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">#23,547</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">#30,457</a>
-                            </li>
+                            <?php foreach($blocks as $index => $block) { ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">#<?=$block?></a>
+                                </li>
+                            <?php } ?>
+                            
                         </ul>
                         <h5 style="padding-left:5px;">My Transactions</h5>
                         <div class="table-wrapper">
@@ -226,78 +244,16 @@ td:nth-child(even) {
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-warning">pending</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-danger">cancelled</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-success">success</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-success">success</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-warning">pending</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-danger">cancelled</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-success">success</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-success">success</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-warning">pending</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-danger">cancelled</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-success">success</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td>2021/03/23 15:00</td>
-                                        <td class="text-success">success</td>
-                                    </tr>
+                                    <?php foreach($txs as $index => $tx) { ?>
+                                        <tr>
+                                            <td><?=$index+1?></td>
+                                            <td><?=$tx['token_amount']?></td>
+                                            <td><?=$tx['time']?></td>
+                                            <td class="<?php $class= $tx['purchase_status'] == 'pending' ? 'text-warning' : ($tx['purchase_status'] == 'success' ? 'text-success' : 'text-danger'); echo $class;?>"><?=$tx['purchase_status']?></td>
+                                        </tr>
+                                    <?php } ?>
+                                    
+                                    
                                 </tbody>
                             </table>
                         </div>

@@ -41,8 +41,8 @@ function create_charge($buy_amount, $buy_cost, $wallet_address, $db) {
     $time = date("Y-m-d H:i:s");
 
     $query = "INSERT INTO purchases 
-        (user_id, payment_code, token_amount, wallet_address, buy_cost, payment_status, time) 
-        VALUES($user_id, '$payment_code', '$buy_amount', '$wallet_address', $buy_cost, 'pending', '$time')";
+        (user_id, payment_code, token_amount, wallet_address, buy_cost, payment_status, purchase_status, time) 
+        VALUES($user_id, '$payment_code', '$buy_amount', '$wallet_address', $buy_cost, 'pending', 'pending', '$time')";
     mysqli_query($db, $query);
 
     // var_dump($result);
