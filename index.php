@@ -527,7 +527,7 @@
                     <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuemax="100">30%</div>
                 </div>
 
-                <button type="button" class="pricing-button btn btn-primary btn-sm btn-block">Buy with Crypto</button>
+                <a type="button" href="mypage" class="pricing-button btn btn-primary btn-sm btn-block" style="color: white">Buy with Crypto</a>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="pricing-item ">
