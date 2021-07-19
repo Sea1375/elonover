@@ -459,7 +459,8 @@
                                     </div>
                                     <!-- Token Info -->
                                     <div class="user-info">
-                                        <h5 class=""><?=$user['amount']?></h5>
+                                        <h5 class=""><?=$user['full_name']?></h5>
+                                        <p class=""><?=$user['amount']?></p>
                                     </div>
                                 </div>
                             </div>

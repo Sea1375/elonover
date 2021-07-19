@@ -6508,6 +6508,12 @@ body.light-version {
     font-weight: bold;
 }
 
+.users .user .user-info p{
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
 .users .left-scroll, .users .right-scroll {
     position: absolute;
     width: 35px;
