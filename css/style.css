@@ -6372,8 +6372,8 @@ body.light-version {
 }
 
 @media (min-width: 992px) {
-    .transaction {
-        flex: 0 0 40%;
+    .image-wrapper {
+        flex: 0 0 15%;
     }
 }
 
@@ -6567,5 +6567,15 @@ body.light-version {
 
 #technology .blocks p, #technology .punchs p {
     color: white;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+#file_input {
+    display: none;
 }
 
