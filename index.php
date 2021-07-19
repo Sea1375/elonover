@@ -27,7 +27,7 @@
   
 // users
   $users = [];
-  $query = "SELECT t1.*, t2.full_name FROM (SELECT sum(token_amount) amount, user_id FROM purchases WHERE purchase_status = 'success' GROUP BY user_id) t1 LEFT JOIN users t2 ON t1.user_id=t2.id;";
+  $query = "SELECT t1.*, t2.full_name, t2.image FROM (SELECT sum(token_amount) amount, user_id FROM purchases WHERE purchase_status = 'success' GROUP BY user_id) t1 LEFT JOIN users t2 ON t1.user_id=t2.id;";
   $result = mysqli_query($db, $query);
   while($row = mysqli_fetch_assoc($result)){
     array_push($users, $row);  
@@ -453,8 +453,8 @@
                                 <div class="user" data-wow-delay="0.5s">
                                     <!-- Image -->
                                     <div class="user-thumb">
-                                        <a href="https://twitter.com/nayibbukele" target="_blank">
-                                            <img src="img/others/5.png" class="center-block" alt="">
+                                        <a href="#" target="_blank">
+                                            <img src="<?php if($user['image']) { echo $user['image']; } else { echo 'img/others/profile.png'; }?>" class="center-block" alt="">
                                         </a>
                                     </div>
                                     <!-- Token Info -->

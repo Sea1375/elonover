@@ -103,7 +103,7 @@
                 </li>
                 <?php if(isset($_SESSION['email_address'])) { ?>
                 <li class="lh-55px">
-                    <a href="/mypage" class="btn login-btn ml-50">My Page</a>
+                    <a href="../mypage" class="btn login-btn ml-50">My Page</a>
                 </li>
                 <?php } else { ?>
                 

@@ -31,6 +31,11 @@
     array_push($blocks, $row['block']);  
   }
 
+  /// get user info
+  $query = 'SELECT * FROM users WHERE id = ' . $user_id;
+  $result = mysqli_query($db, $query);
+  $user_info = mysqli_fetch_assoc($result);
+
 ?>
 
 <!DOCTYPE html>
@@ -199,7 +204,7 @@ td:nth-child(even) {
                                 <span>Your Wallet Address to Receive Tokens</span>
                             </div>
                             <div>
-                                <input class="form-control" id="wallet_address" name="wallet_address"/>
+                                <input class="form-control" id="wallet_address" name="wallet_address" value="<?=$user_info['default_wallet']?>"/>
                             </div>
                         </div>
 
@@ -310,7 +315,7 @@ td:nth-child(even) {
                                             <span>Your Wallet Address to Receive Tokens</span>
                                         </div>
                                         <div>
-                                            <input class="form-control" id="wallet_address" name="wallet_address"/>
+                                            <input class="form-control" id="wallet_address" name="wallet_address" value="<?=$user_info['default_wallet']?>"/>
                                         </div>
                                     </div>
 
