@@ -24,17 +24,28 @@
   }
 
   $blocks = [];
-  $query = "SELECT block FROM purchases WHERE user_id = ".$user_id." and block <> '' GROUP BY block;";
+  $query = "SELECT block, tx_hash FROM purchases WHERE user_id = ".$user_id." and block <> '' GROUP BY block;";
   $result = mysqli_query($db, $query);
 
   while($row = mysqli_fetch_assoc($result)){
-    array_push($blocks, $row['block']);  
+    array_push($blocks, array(
+        'block' => $row['block'],
+        'tx_hash' => $row['tx_hash']
+    ));  
   }
 
   /// get user info
   $query = 'SELECT * FROM users WHERE id = ' . $user_id;
   $result = mysqli_query($db, $query);
   $user_info = mysqli_fetch_assoc($result);
+
+
+  $settings = [];
+  $query = "SELECT * FROM settings;";
+  $result = mysqli_query($db, $query);
+  while($row = mysqli_fetch_assoc($result)){
+    $settings[$row['key']] = $row['value'];
+  }
 
 ?>
 
@@ -151,20 +162,18 @@ td:nth-child(even) {
     <div class="container" style="border:1px solid white;">
         <div class="row align-items-center">
             <div class="col-12 col-lg-12 col-md-12">
+                <li class="nav-item float-left">
+                    <?php  if (isset($_SESSION['email_address'])) : ?>
+                    <a class="nav-link text-white" href="#">Hello, <?php echo $_SESSION['full_name']; ?></a>
+                    <?php endif ?>
+                </li>
                 <ul class="nav justify-content-end">
+                    
                     <li class="nav-item">
-                        <?php  if (isset($_SESSION['email_address'])) : ?>
-                        <a class="nav-link" href="#">Hello, <?php echo $_SESSION['full_name']; ?></a>
-                        <?php endif ?>
+                        <a class="nav-link text-white" href="../profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?logout='1'">Sign Out</a>
+                        <a class="nav-link text-white" href="index.php?logout='1'">Sign Out</a>
                     </li>
                 </ul>
             </div>
@@ -179,7 +188,7 @@ td:nth-child(even) {
                         <div class="row">
                             <div class="col-6">
                                 <div class="bg-green">
-                                    <span>Tokens</label>
+                                    <span>Tokens to Buy</label>
                                 </div>
                             </div>
                             <div class="col-6">
@@ -189,7 +198,7 @@ td:nth-child(even) {
                         <div class="row mt-2">
                             <div class="col-6">
                                 <div class="bg-info">
-                                    <span>Cost</label>
+                                    <span>Cost (US$)</label>
                                 </div>
                                 
                             </div>
@@ -210,11 +219,11 @@ td:nth-child(even) {
 
                         <div class="agree-terms mt-2">
                             <input type="checkbox" name="agree" id="agree" value="Yes" required>
-                            <label for="agree"><i>Agree to Terms & Conditions</i></label>
+                            <label for="agree"><i>I Confirm My Wallet Address</i></label>
                         </div>
 
                         <div class="mt-2">
-                            <a class="btn dream-btn fadeInUp d-block" data-wow-delay="0.6s" id="btn_buy">Buy</a>
+                            <button class="btn dream-btn fadeInUp d-block" data-wow-delay="0.6s" id="btn_buy" style="width:100%">Buy</button>
                         </div>
                     </div>
                 
@@ -234,13 +243,22 @@ td:nth-child(even) {
                         <ul class="nav">
                             <?php foreach($blocks as $index => $block) { ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">#<?=$block?></a>
+                                    <a class="nav-link" href="https://bscscan.com/tx/<?=$block['tx_hash']?>" target="_blank">#<?=$block['block']?></a>
                                 </li>
                             <?php } ?>
+
+                            <?php if(count($blocks) == 0) { ?>
+                                <li class="pl-3">
+                                    No Punches yet recorded for you
+                                </li>
+                            <?php } ?>
+
+
                             
                         </ul>
                         <h5 style="padding-left:5px;">My Transactions</h5>
                         <div class="table-wrapper">
+
                             <table>
                                 <thead>
                                     <tr>
@@ -258,6 +276,13 @@ td:nth-child(even) {
                                             <td><?=$tx['token_amount']?></td>
                                             <td><?=$tx['time']?></td>
                                             <td class="<?php $class= $tx['purchase_status'] == 'pending' ? 'text-warning' : ($tx['purchase_status'] == 'success' ? 'text-success' : 'text-danger'); echo $class;?>"><?=$tx['purchase_status']?></td>
+                                        </tr>
+                                    <?php } ?>
+
+
+                                    <?php if(count($txs) == 0) { ?>
+                                        <tr>
+                                            <td colspan="4">No Transactions  yet recorded for you</td>
                                         </tr>
                                     <?php } ?>
                                     
@@ -361,6 +386,10 @@ td:nth-child(even) {
 
     <!-- script js -->
     <script src="../js/script.js"></script>
+
+    <script>
+        var cost_per_token = <?=isset($settings['token_price']) ? $settings['token_price'] : '0.01'?>;
+    </script>
 
     <script src="../js/token_purchase.js"></script>
 

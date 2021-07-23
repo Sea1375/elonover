@@ -17,11 +17,11 @@
 
   if (isset($_POST['save_profile'])) {
     $full_name = $_POST['full_name'];
-    $address = $_POST['address'];
+    $social_link = $_POST['social_link'];
     $image = $_POST['image'];
     $default_wallet = $_POST['default_wallet'];
     
-    $query = "UPDATE users SET full_name='$full_name', address='$address', image='$image', default_wallet='$default_wallet' WHERE id = ". $user_id .";";
+    $query = "UPDATE users SET full_name='$full_name', social_link='$social_link', image='$image', default_wallet='$default_wallet' WHERE id = ". $user_id .";";
     mysqli_query($db, $query);
   }
 
@@ -146,20 +146,17 @@ td:nth-child(even) {
     <div class="container" style="border:1px solid white;">
         <div class="row align-items-center">
             <div class="col-12 col-lg-12 col-md-12">
+                <li class="nav-item float-left">
+                    <?php  if (isset($_SESSION['email_address'])) : ?>
+                    <a class="nav-link text-white" href="#">Hello, <?php echo $_SESSION['full_name']; ?></a>
+                    <?php endif ?>
+                </li>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <?php  if (isset($_SESSION['email_address'])) : ?>
-                        <a class="nav-link" href="#">Hello, <?php echo $_SESSION['full_name']; ?></a>
-                        <?php endif ?>
+                        <a class="nav-link text-white" href="../mypage">My Page</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../mypage">My Page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?logout='1'">Sign Out</a>
+                        <a class="nav-link text-white" href="index.php?logout='1'">Sign Out</a>
                     </li>
                 </ul>
             </div>
@@ -185,7 +182,7 @@ td:nth-child(even) {
                                 <div class="row">
                                     <div class="col-5">
                                         <div class="bg-green">
-                                            <span>Full Name</label>
+                                            <span>Display Name</label>
                                         </div>
                                     </div>
                                     <div class="col-7">
@@ -195,11 +192,11 @@ td:nth-child(even) {
                                 <div class="row mt-2">
                                     <div class="col-5">
                                         <div class="bg-green">
-                                            <span>Address</label>
+                                            <span>Social Account Link</label>
                                         </div>
                                     </div>
                                     <div class="col-7">
-                                        <input class="form-control" type="text" id="address" name="address" value="<?=$user_info['address']?>"/>
+                                        <input class="form-control" type="text" id="social_link" name="social_link" value="<?=$user_info['social_link']?>"/>
                                     </div>
                                 </div>     
                             </div>

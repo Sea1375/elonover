@@ -27,11 +27,19 @@
   
 // users
   $users = [];
-  $query = "SELECT t1.*, t2.full_name, t2.image FROM (SELECT sum(token_amount) amount, user_id FROM purchases WHERE purchase_status = 'success' GROUP BY user_id) t1 LEFT JOIN users t2 ON t1.user_id=t2.id;";
+  $query = "SELECT t1.*, t2.full_name, t2.image, t2.social_link FROM (SELECT sum(token_amount) amount, user_id FROM purchases WHERE purchase_status = 'success' GROUP BY user_id) t1 LEFT JOIN users t2 ON t1.user_id=t2.id;";
   $result = mysqli_query($db, $query);
   while($row = mysqli_fetch_assoc($result)){
     array_push($users, $row);  
   }
+
+  $settings = [];
+  $query = "SELECT * FROM settings;";
+  $result = mysqli_query($db, $query);
+  while($row = mysqli_fetch_assoc($result)){
+    $settings[$row['key']] = $row['value'];
+  }
+//   var_dump($settings['sale_progress']);
 
 ?>
 
@@ -453,7 +461,7 @@
                                 <div class="user" data-wow-delay="0.5s">
                                     <!-- Image -->
                                     <div class="user-thumb">
-                                        <a href="#" target="_blank">
+                                        <a target="_blank" href="<?php if($user['social_link']) { echo $user['social_link']; } else { echo '#'; }?>" target="_blank">
                                             <img src="<?php if($user['image']) { echo $user['image']; } else { echo 'img/others/profile.png'; }?>" class="center-block" alt="">
                                         </a>
                                     </div>
@@ -508,7 +516,7 @@
                     <h3><strong class="xzc-1-month" style="font-size: 18px;">Allocation</strong></h3> 
                     <span>6,000,000</span> 
                     <div class="pricing">Tokens</div> 
-                    <label><strong style="font-size: 12px;">Investors Locked for 2 Years</strong></label>
+                    <label><strong style="font-size: 12px;">The Big Five</strong></label>
                 </div>
 
                 <div class="progress pricing-item-progress">
@@ -525,10 +533,10 @@
                 </div>
 
                 <div class="progress pricing-item-progress mb-3">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuemax="100">30%</div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: <?=isset($settings['sale_progress']) ? $settings['sale_progress'] : '0'?>%" aria-valuemax="100"><?=isset($settings['sale_progress']) ? $settings['sale_progress'] : '0'?>%</div>
                 </div>
 
-                <a type="button" href="<?php if (isset($_SESSION['user_id'])) { echo 'mypage';} else { echo 'login';}?>" class="pricing-button btn btn-primary btn-sm btn-block" style="color: white">Buy with Crypto</a>
+                <a type="button" href="<?php if (isset($_SESSION['user_id'])) { echo 'mypage';} else { echo 'login';}?>" class="pricing-button btn btn-primary btn-sm btn-block" style="color: white; height: 50px;background-color: darkorchid;line-height: 40px;font-size: 16px;">Buy with Crypto</a>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="pricing-item ">
@@ -548,7 +556,7 @@
                     <h4>Live Exchange</h4>
                     <img src="img/others/pngwing.png" width="127px">
                     <h3></h3>
-                    <label><strong style="font-size: 12px;">Apollo Mission Launched</strong></label>
+                    <label><strong style="font-size: 12px;">Mission Over-X Launched</strong></label>
                 </div>
 
                 <div class="progress pricing-item-progress">
@@ -564,12 +572,12 @@
 
 <!-- ##### Web Game Box start ##### -->
 <section class="about-us-area section-padding-0-100 clearfix">
-    <div class="container" style="border:3px solid white;">
+    <div class="container" style="">
         <div class="">
             <!-- Dream Dots -->
             <!-- <h2 class="fadeInUp" data-wow-delay="0.3s">Web Game Box</h2> -->
 
-            <!-- <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe> -->
+            <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe>
         </div>
     </div>
 
@@ -840,7 +848,7 @@
                             <ul>
                                 <li>Get Listed on big exchanges.</li>
                                 <li>ELOV Conference</li>
-                                <li>RReach 5M followers</li>
+                                <li>Reach 5M followers</li>
                             </ul>
 
                             <div class="line"></div>

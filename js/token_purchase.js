@@ -1,7 +1,19 @@
 $(function() {
     console.log('token_purchase.js');
 
-    let cost_per_token = 0.01;
+    // let cost_per_token = 0.01;
+
+    if ($('#agree:checked').length == 0) {
+        $('#btn_buy').prop('disabled', true);
+    }
+
+    $('#agree').click(() => {
+        if ($('#agree:checked').length == 0) {
+            $('#btn_buy').prop('disabled', true);
+        } else {
+            $('#btn_buy').prop('disabled', false);
+        }
+    })
 
     $('#buy_amount').bind('input', () => {
         let buy_amount = $('#buy_amount').val();
@@ -11,7 +23,8 @@ $(function() {
         $('#buy_cost').val(cost);
     })
 
-    $('#btn_buy').click(() => {
+    $('#btn_buy').click((e) => {
+        e.preventDefault();
         let buy_amount = $('#buy_amount').val();
         buy_amount = Number(buy_amount);
         let cost = cost_per_token * buy_amount;

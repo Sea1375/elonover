@@ -10,6 +10,8 @@ $email_address    = "";
 $user_id = "";
 $errors = array(); 
 
+$time = date("Y-m-d H:i:s");
+
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -51,8 +53,8 @@ if (isset($_POST['reg_user'])) {
   	
 
     //// register
-  	$query = "INSERT INTO users (full_name, email_address, password) 
-  			  VALUES('$full_name', '$email_address', '$password1')";
+  	$query = "INSERT INTO users (full_name, email_address, password, last_login_time) 
+  			  VALUES('$full_name', '$email_address', '$password1', '$time')";
   	mysqli_query($db, $query);
 
 
@@ -66,7 +68,7 @@ if (isset($_POST['reg_user'])) {
     $_SESSION['full_name'] = $user['full_name'];
     $_SESSION['success'] = "You are now logged in";
 
-  	header('location: ../index.php');
+  	header('location: ../mypage');
   }
 }
 
@@ -95,7 +97,11 @@ if (isset($_POST['login_user'])) {
       $_SESSION['email_address'] = $user['email_address'];
       $_SESSION['full_name'] = $user['full_name'];
       $_SESSION['success'] = "You are now logged in";
-  	  header('location: ../index.php');
+
+      $query = "UPDATE users SET last_login_time='$time' WHERE id=". $user['id'];
+      mysqli_query($db, $query);
+
+  	  header('location: ../mypage');
   	}else {
   		array_push($errors, "Wrong email/password combination");
   	}
@@ -118,7 +124,11 @@ if (isset($_POST['google_signin'])) {
     $_SESSION['email_address'] = $user['email_address'];
     $_SESSION['full_name'] = $user['full_name'];
     $_SESSION['success'] = "You are now logged in";
-    header('location: ../index.php');
+
+    $query = "UPDATE users SET last_login_time='$time' WHERE id=". $user['id'];
+    mysqli_query($db, $query);
+
+    header('location: ../mypage');
   } else {
     $query = "INSERT INTO users (full_name, google_id, email_address) 
   			  VALUES('$full_name', '$google_id', '$email_address')";
@@ -132,7 +142,11 @@ if (isset($_POST['google_signin'])) {
     $_SESSION['email_address'] = $user['email_address'];
     $_SESSION['full_name'] = $user['full_name'];
     $_SESSION['success'] = "You are now logged in";
-  	header('location: ../index.php');
+
+    $query = "UPDATE users SET last_login_time='$time' WHERE id=". $user['id'];
+    mysqli_query($db, $query);
+
+  	header('location: ../mypage');
   }
 }
 
