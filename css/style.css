@@ -2732,6 +2732,15 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     .info-wrapper .token-descr {
         font-size: 11px;
     }
+
+    .info-wrapper .token-icon {
+        font-size: 15px;
+        width: 20px;
+    }
+
+    .token-info .info-wrapper {
+        padding-left: 50px;
+    }
 }
 /* ##### Service Area CSS ##### */
 
@@ -2860,10 +2869,9 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 .service_icon1{
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     display: inline-block;
     /* max-width: 150px; */
-    min-height: 60px;
     width: 130%;
     position: relative;
     left: -15%;
@@ -2882,7 +2890,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 
     .service_icon1 {
         width: 160%;
-        left: inherit;
+        left: -30%;
     }
 
     .service_single_content h5 {
@@ -2890,6 +2898,23 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
         width: 150%;
     }
 }
+
+@media (max-width: 460px) {
+    .service_icon1 {
+        width: 200%;
+        left: -50%;
+    }
+}
+
+@media (max-width: 380px) {
+    .service_icon1 {
+        width: 220%;
+        left: -60%;
+    }
+}
+
+
+
 
 .service_icon img {
     width: 100%;

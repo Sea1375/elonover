@@ -214,9 +214,11 @@ td:nth-child(even) {
                             </div>
                         </div>
 
-                        <div class="mt-2">
-                            <button class="btn dream-btn fadeInUp d-block" data-wow-delay="0.6s" style="width: 100%" name="save_profile">Save</button>
-                        </div>
+                        
+                    </div>
+
+                    <div class="mt-2">
+                        <button class="btn dream-btn fadeInUp d-block" data-wow-delay="0.6s" style="width: 100%" name="save_profile">Save</button>
                     </div>
                 
                 </form>
