@@ -168,12 +168,12 @@
             <div class="col-lg-6 col-sm-12 mt-s">
                 <h2 class="text-center mb-30 fadeInUp" data-wow-delay="0.3s">Fund Distribution</h2>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <div class="">
                             <img src="img/others/graph-11.png" class="center-block mb-sm-30" alt="">
                         </div>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-8">
                         <div class="token-info">
                             <div class="info-wrapper one">
                                 <div class="token-icon">12%</div>
@@ -263,7 +263,7 @@
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2" style="padding:0px;">
                 <div class="single-team-member-wrapper">
-                    <div class="row single-team-member fadeInUp" data-wow-delay="0.2s">
+                    <div class="single-team-member fadeInUp" data-wow-delay="0.2s">
                         <!-- Image -->
                         <div class="team-member-thumb">
                             <a href="https://twitter.com/maxkeiser" target="_blank">
@@ -295,7 +295,7 @@
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2 " style="padding:0px;">
                 <div class="single-team-member-wrapper">
-                    <div class="row single-team-member fadeInUp" data-wow-delay="0.3s">
+                    <div class="single-team-member fadeInUp" data-wow-delay="0.3s">
                         <!-- Image -->
                         <div class="team-member-thumb">
                             <a href="https://twitter.com/michael_saylor" target="_blank">
@@ -327,7 +327,7 @@
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
                 <div class="single-team-member-wrapper">
-                    <div class="row single-team-member fadeInUp" data-wow-delay="0.4s">
+                    <div class="single-team-member fadeInUp" data-wow-delay="0.4s">
                         <!-- Image -->
                         <div class="team-member-thumb">
                             <a href="https://twitter.com/chamath" target="_blank">
@@ -359,7 +359,7 @@
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
                 <div class="single-team-member-wrapper">
-                    <div class="row single-team-member fadeInUp" data-wow-delay="0.5s">
+                    <div class="single-team-member fadeInUp" data-wow-delay="0.5s">
                         <!-- Image -->
                         <div class="team-member-thumb">
                             <a href="https://twitter.com/vitalikbuterin" target="_blank">
@@ -391,7 +391,7 @@
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2"  style="padding:0px;">
                 <div class="single-team-member-wrapper">
-                    <div class="row single-team-member fadeInUp" data-wow-delay="0.5s">
+                    <div class="single-team-member fadeInUp" data-wow-delay="0.5s">
                         <!-- Image -->
                         <div class="team-member-thumb">
                             <a href="https://twitter.com/nayibbukele" target="_blank">
@@ -467,7 +467,7 @@
                                     </div>
                                     <!-- Token Info -->
                                     <div class="user-info">
-                                        <h5 class=""><?=$user['full_name']?></h5>
+                                        <h5 class=""><?=strlen($user['full_name']) > 8 ? substr($user['full_name'], 0 ,8) . '..' : $user['full_name']?></h5>
                                         <p class=""><?=$user['amount']?></p>
                                     </div>
                                 </div>
@@ -510,7 +510,7 @@
             <h2 class="fadeInUp" data-wow-delay="0.3s">Our Token Prices</h2>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-sm-6 col-xs-12 mb-3">
                 <div class="pricing-item ">
                     <h4>Round 1</h4> 
                     <h3><strong class="xzc-1-month" style="font-size: 18px;">Allocation</strong></h3> 
@@ -523,7 +523,7 @@
                     <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuemax="100">100%</div>
                 </div>
             </div> 
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-sm-6 col-xs-12 mb-3">
                 <div class="pricing-item active">
                     <h4>Round 2</h4> 
                     <h3><strong class="xzc-1-month">0.10$</strong></h3> 
@@ -538,7 +538,7 @@
 
                 <a type="button" href="<?php if (isset($_SESSION['user_id'])) { echo 'mypage';} else { echo 'login';}?>" class="pricing-button btn btn-primary btn-sm btn-block" style="color: white; height: 50px;background-color: darkorchid;line-height: 40px;font-size: 16px;">Buy with Crypto</a>
             </div> 
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-sm-6 col-xs-12 mb-3">
                 <div class="pricing-item ">
                     <h4>Round 3</h4> 
                     <h3><strong class="xzc-1-month">0.50$</strong></h3> 
@@ -551,7 +551,7 @@
                     <div class="progress-bar bg-white text-white" role="progressbar" style="width: 100%" aria-valuemax="100">SOON</div>
                 </div>
             </div> 
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-sm-6 col-xs-12 mb-3">
                 <div class="pricing-item ">
                     <h4>Live Exchange</h4>
                     <img src="img/others/pngwing.png" width="127px">
@@ -577,7 +577,7 @@
             <!-- Dream Dots -->
             <!-- <h2 class="fadeInUp" data-wow-delay="0.3s">Web Game Box</h2> -->
 
-            <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe>
+            <!-- <iframe class="game-box" src="https://elon-punch-demo6.netlify.app"></iframe> -->
         </div>
     </div>
 
@@ -669,52 +669,85 @@
 <section class="our_services_area section-padding-0-0 clearfix" >
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-2 col-lg-2">
+            <div class="col-2">
                 <!-- Content -->
                 <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
                     <!-- Icon -->
-                    <h6>If you invest</h6>
-                    <div class="service_icon">
+                    <h5>If you invest</h5>
+                </div>
+            </div>
+            <div class="col-2">
+                <!-- Content -->
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                    <!-- Icon -->
+                    <h5>10x</h5>
+                </div>
+            </div>
+            <div class="col-2">
+                <!-- Content -->
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                    <!-- Icon -->
+                    <h5>100x</h5>
+                </div>
+            </div>
+            <div class="col-2">
+                <!-- Content -->
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                    <h5>1000x</h5>
+                </div>
+            </div>
+            <div class="col-2">
+                <!-- Content -->
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                    <!-- Icon -->
+                    <h5>1000x</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-2">
+                <!-- Content -->
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                    <!-- Icon -->
+                    <div class="service_icon1">
                         <img src="img/others/11.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-2 col-lg-2">
+            <div class="col-2">
                 <!-- Content -->
                 <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
                     <!-- Icon -->
-                    <h6>10x</h6>
-                    <div class="service_icon">
+                    <div class="service_icon1">
                         <img src="img/others/12.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-2 col-lg-2">
+            <div class="col-2">
                 <!-- Content -->
                 <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
                     <!-- Icon -->
-                    <h6>100x</h6>
-                    <div class="service_icon">
+                    <div class="service_icon1">
                         <img src="img/others/13.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-2 col-lg-2">
+            <div class="col-2">
                 <!-- Content -->
                 <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
                         <!-- Icon -->
-                    <h6>1000x</h6>
-                    <div class="service_icon">
+                    <div class="service_icon1">
                         <img src="img/others/14.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-2 col-lg-2">
+            <div class="col-2">
                 <!-- Content -->
                 <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
                     <!-- Icon -->
-                    <h6>1000x</h6>
-                    <div class="service_icon">
+                    <div class="service_icon1">
                         <img src="img/others/15.png" alt="">
                     </div>
                 </div>
