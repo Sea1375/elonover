@@ -259,7 +259,7 @@
 <!-- ##### Man Area Start ##### -->
 <section class="our_team_area section-padding-0-0 clearfix" id="team">
     <div class="container">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center pl-3 pr-4">
             <!-- Single Team Member -->
             <div class="col-12 col-sm-6 col-lg-2" style="padding:0px;">
                 <div class="single-team-member-wrapper">
