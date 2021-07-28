@@ -20,18 +20,18 @@
 
 /// blocks
   $blocks = 0;
-//   $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases GROUP BY block) as t1;";
-  $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases WHERE block IS NOT NULL GROUP BY user_id) as t1;";
+  $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases GROUP BY block) as t1;";
+//   $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases WHERE block IS NOT NULL GROUP BY user_id) as t1;";
   $result = mysqli_query($db, $query);
   $row = mysqli_fetch_assoc($result);
   if ($row) $blocks = $row['blocks'];
   
 // users
-  $users = [];
-  $query = "SELECT t1.*, t2.full_name, t2.image, t2.social_link FROM (SELECT sum(token_amount) amount, user_id FROM purchases WHERE purchase_status = 'success' GROUP BY user_id) t1 LEFT JOIN users t2 ON t1.user_id=t2.id;";
+  $transactions = [];
+  $query = "SELECT t1.*, t2.full_name, t2.image, t2.social_link FROM (SELECT token_amount as amount, user_id, time FROM purchases WHERE purchase_status = 'success') t1 LEFT JOIN users t2 ON t1.user_id=t2.id ORDER BY t1.time DESC";
   $result = mysqli_query($db, $query);
   while($row = mysqli_fetch_assoc($result)){
-    array_push($users, $row);  
+    array_push($transactions, $row);  
   }
 
   $settings = [];
@@ -279,7 +279,7 @@
                     </div>
 
                     <div class="key-proof text-center">
-                        <a class="clearfix d-block" href="#">
+                        <a class="clearfix d-block" href="https://twitter.com/elonover/status/1420306679426691072?s=21" target="_blank">
                             <img src="img/others/key_proof.png" />
                             <span>Key Proof</span>
                         </a>
@@ -311,7 +311,7 @@
                     </div>
 
                     <div class="key-proof text-center">
-                        <a class="clearfix d-block"  href="#">
+                        <a class="clearfix d-block" target="_blank"  href="https://twitter.com/elonover/status/1420307020880781318?s=21">
                             <img src="img/others/key_proof.png" />
                             <span>Key Proof</span>
                         </a>
@@ -343,7 +343,7 @@
                     </div>
 
                     <div class="key-proof text-center">
-                        <a class="clearfix d-block"  href="#">
+                        <a class="clearfix d-block"  target="_blank" href="https://twitter.com/elonover/status/1420307325831761922?s=21">
                             <img src="img/others/key_proof.png" />
                             <span>Key Proof</span>
                         </a>
@@ -375,7 +375,7 @@
                     </div>
 
                     <div class="key-proof text-center">
-                        <a class="clearfix d-block"  href="#">
+                        <a class="clearfix d-block"  target="_blank" href="https://twitter.com/elonover/status/1420307581478780928?s=21">
                             <img src="img/others/key_proof.png" />
                             <span>Key Proof</span>
                         </a>
@@ -407,7 +407,7 @@
                     </div>
 
                     <div class="key-proof text-center">
-                        <a class="clearfix d-block"  href="#">
+                        <a class="clearfix d-block"  target="_blank" href="https://twitter.com/elonover/status/1420308032983076865?s=21">
                             <img src="img/others/key_proof.png" />
                             <span>Key Proof</span>
                         </a>
@@ -457,94 +457,19 @@
                         <img src="img/others/icon-right.png" />
                     </div>
                     <div class="row">
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a target="_blank" href="https://twitter.com/maxkeiser" target="_blank">
-                                        <img src="img/others/1.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">MAX KEISER</h5>
-                                    <p class=""><?=number_format(1000000)?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a target="_blank" href="https://twitter.com/michael_saylor" target="_blank">
-                                        <img src="img/others/2.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">MICHAEL...</h5>
-                                    <p class=""><?=number_format(1000000)?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a target="_blank" href="https://twitter.com/chamath" target="_blank">
-                                        <img src="img/others/3.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">CHAMATH</h5>
-                                    <p class=""><?=number_format(1000000)?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a target="_blank" href="https://twitter.com/vitalikbuterin" target="_blank">
-                                        <img src="img/others/4.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">VITALIK</h5>
-                                    <p class=""><?=number_format(1000000)?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
-                            <div class="user" data-wow-delay="0.5s">
-                                <!-- Image -->
-                                <div class="user-thumb">
-                                    <a target="_blank" href="https://twitter.com/nayibbukele" target="_blank">
-                                        <img src="img/others/5.png" class="center-block" alt="">
-                                    </a>
-                                </div>
-                                <!-- Token Info -->
-                                <div class="user-info">
-                                    <h5 class="">MR. PRES..</h5>
-                                    <p class=""><?=number_format(1000000)?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <?php foreach($users as $index => $user) { ?>
+                        <?php foreach($transactions as $index => $tx) { ?>
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
                                 <div class="user" data-wow-delay="0.5s">
                                     <!-- Image -->
                                     <div class="user-thumb">
-                                        <a target="_blank" href="<?php if($user['social_link']) { echo $user['social_link']; } else { echo '#'; }?>" target="_blank">
-                                            <img src="<?php if($user['image']) { echo $user['image']; } else { echo 'img/others/profile.png'; }?>" class="center-block" alt="">
+                                        <a target="_blank" href="<?php if($tx['social_link']) { echo $tx['social_link']; } else { echo '#'; }?>" target="_blank">
+                                            <img src="<?php if($tx['image']) { echo $tx['image']; } else { echo 'img/others/profile.png'; }?>" class="center-block" alt="">
                                         </a>
                                     </div>
                                     <!-- Token Info -->
                                     <div class="user-info">
-                                        <h5 class=""><?=strlen($user['full_name']) > 8 ? substr($user['full_name'], 0 ,8) . '..' : $user['full_name']?></h5>
-                                        <p class=""><?=number_format($user['amount'])?></p>
+                                        <h5 class=""><?=strlen($tx['full_name']) > 8 ? substr($tx['full_name'], 0 ,8) . '..' : $tx['full_name']?></h5>
+                                        <p class=""><?=number_format($tx['amount'])?></p>
                                     </div>
                                 </div>
                             </div>
@@ -559,13 +484,13 @@
                     <div class="col-6">
                         <div class="blocks">
                             <h5 class="title">Blocks</h5>
-                            <p><?=number_format($blocks + 5)?></p>
+                            <p><?=number_format($blocks)?></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="punchs">
                             <h5 class="title">Punches</h5>
-                            <p><?=number_format($punches + 5000000)?></p>
+                            <p><?=number_format($punches)?></p>
                         </div>
                     </div>
                 </div>
@@ -612,7 +537,8 @@
                     <div class="progress-bar bg-warning" role="progressbar" style="width: <?=isset($settings['sale_progress']) ? $settings['sale_progress'] : '0'?>%" aria-valuemax="100"><?=isset($settings['sale_progress']) ? $settings['sale_progress'] : '0'?>%</div>
                 </div>
 
-                <a type="button" href="<?php if (isset($_SESSION['user_id'])) { echo 'mypage';} else { echo 'login';}?>" class="pricing-button btn btn-primary btn-sm btn-block" style="color: white; height: 50px;background-color: darkorchid;line-height: 40px;font-size: 16px;">Buy with Crypto</a>
+                <a type="button" href="<?php if (isset($_SESSION['user_id'])) { echo 'mypage';} else { echo 'login';}?>" class="pricing-button btn btn-primary btn-sm btn-block buy-with-crypto" style="">Buy with Crypto</a>
+                <a class="d-block text-center mt-2 show-me-link" href="https://twitter.com/nayibbukele" target="_blank">Show me how to buy</a>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12 mb-3">
                 <div class="pricing-item ">
