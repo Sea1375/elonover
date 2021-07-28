@@ -6602,9 +6602,10 @@ body.light-version {
 }
 
 .users .user .user-info p{
-    color: white;
+    color: #f1b909;
     text-align: center;
     margin-bottom: 0;
+    font-size: 14px;
 }
 
 .users .left-scroll, .users .right-scroll {

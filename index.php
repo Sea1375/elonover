@@ -20,7 +20,8 @@
 
 /// blocks
   $blocks = 0;
-  $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases GROUP BY block) as t1;";
+//   $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases GROUP BY block) as t1;";
+  $query = "SELECT count(t1.block) blocks FROM (SELECT block FROM purchases WHERE block IS NOT NULL GROUP BY user_id) as t1;";
   $result = mysqli_query($db, $query);
   $row = mysqli_fetch_assoc($result);
   if ($row) $blocks = $row['blocks'];
@@ -456,6 +457,81 @@
                         <img src="img/others/icon-right.png" />
                     </div>
                     <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a target="_blank" href="https://twitter.com/maxkeiser" target="_blank">
+                                        <img src="img/others/1.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">MAX KEISER</h5>
+                                    <p class=""><?=number_format(1000000)?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a target="_blank" href="https://twitter.com/michael_saylor" target="_blank">
+                                        <img src="img/others/2.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">MICHAEL...</h5>
+                                    <p class=""><?=number_format(1000000)?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a target="_blank" href="https://twitter.com/chamath" target="_blank">
+                                        <img src="img/others/3.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">CHAMATH</h5>
+                                    <p class=""><?=number_format(1000000)?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a target="_blank" href="https://twitter.com/vitalikbuterin" target="_blank">
+                                        <img src="img/others/4.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">VITALIK</h5>
+                                    <p class=""><?=number_format(1000000)?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
+                            <div class="user" data-wow-delay="0.5s">
+                                <!-- Image -->
+                                <div class="user-thumb">
+                                    <a target="_blank" href="https://twitter.com/nayibbukele" target="_blank">
+                                        <img src="img/others/5.png" class="center-block" alt="">
+                                    </a>
+                                </div>
+                                <!-- Token Info -->
+                                <div class="user-info">
+                                    <h5 class="">MR. PRES..</h5>
+                                    <p class=""><?=number_format(1000000)?></p>
+                                </div>
+                            </div>
+                        </div>
                         <?php foreach($users as $index => $user) { ?>
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12 user-wrapper">
                                 <div class="user" data-wow-delay="0.5s">
@@ -468,7 +544,7 @@
                                     <!-- Token Info -->
                                     <div class="user-info">
                                         <h5 class=""><?=strlen($user['full_name']) > 8 ? substr($user['full_name'], 0 ,8) . '..' : $user['full_name']?></h5>
-                                        <p class=""><?=$user['amount']?></p>
+                                        <p class=""><?=number_format($user['amount'])?></p>
                                     </div>
                                 </div>
                             </div>
@@ -483,13 +559,13 @@
                     <div class="col-6">
                         <div class="blocks">
                             <h5 class="title">Blocks</h5>
-                            <p><?=$blocks?></p>
+                            <p><?=number_format($blocks + 5)?></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="punchs">
                             <h5 class="title">Punches</h5>
-                            <p><?=$punches?></p>
+                            <p><?=number_format($punches + 5000000)?></p>
                         </div>
                     </div>
                 </div>
