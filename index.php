@@ -538,7 +538,7 @@
                 </div>
 
                 <a type="button" href="<?php if (isset($_SESSION['user_id'])) { echo 'mypage';} else { echo 'login';}?>" class="pricing-button btn btn-primary btn-sm btn-block buy-with-crypto" style="">Buy with Crypto</a>
-                <a class="d-block text-center mt-2 show-me-link" href="https://twitter.com/nayibbukele" target="_blank">Show me how to buy</a>
+                <a class="d-block text-center mt-2 show-me-link" href="https://youtu.be/XdoDf8muHUA" target="_blank">Show me how to buy</a>
             </div> 
             <div class="col-lg-3 col-sm-6 col-xs-12 mb-3">
                 <div class="pricing-item ">

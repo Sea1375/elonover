@@ -53,13 +53,14 @@ if (isset($_POST['reg_user'])) {
   	
 
     //// register
+    $hashed_password = password_hash($password1, PASSWORD_DEFAULT);
   	$query = "INSERT INTO users (full_name, email_address, password, last_login_time) 
-  			  VALUES('$full_name', '$email_address', '$password1', '$time')";
+  			  VALUES('$full_name', '$email_address', '$hashed_password', '$time')";
   	mysqli_query($db, $query);
 
 
     /// login after register
-    $query = "SELECT * FROM users WHERE email_address='$email_address' AND password='$password1'";
+    $query = "SELECT * FROM users WHERE email_address='$email_address' AND password='$hashed_password'";
   	$results = mysqli_query($db, $query);
     $user = mysqli_fetch_assoc($results);
 
@@ -88,11 +89,12 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	
-  	$query = "SELECT * FROM users WHERE email_address='$email_address' AND password='$password'";
+  	$query = "SELECT * FROM users WHERE email_address='$email_address' AND google_id IS NULL;";
   	$results = mysqli_query($db, $query);
     $user = mysqli_fetch_assoc($results);
 
-  	if ($user) {
+  	if ($user && password_verify($password, $user['password'])) {
+      
   	  $_SESSION['user_id'] = $user['id'];
       $_SESSION['email_address'] = $user['email_address'];
       $_SESSION['full_name'] = $user['full_name'];
